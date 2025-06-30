@@ -1,0 +1,11 @@
+{
+  "standaloneTestData": {
+    "firstName": "Raj",
+    "lastName": "Verma",
+    "email": "raj@example.com",
+    "mobile": "9123456789",
+    "subjects": ["English", "Maths"],
+    "hobbies": ["Sports", "Music"],
+    "address": "MG Road, Pune"
+  }
+}

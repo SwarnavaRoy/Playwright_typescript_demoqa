@@ -1,0 +1,19 @@
+{
+  "firstName": "Raj",
+  "lastName": "Verma",
+  "email": "raj@example.com",
+  "gender": "Male",
+  "dob": {
+    "year": "1990",
+    "month": "June",
+    "date": "28"
+  },
+  "picture": "/Users/swarnavaroy/Desktop/testFileUpload.png",
+  "state": "NCR",
+  "city": "Noida",
+  "currentAddress": "MG Road, Pune",
+  "permanentAddress": "MG Road, Pune",
+  "age": 34,
+  "salary": 1260300,
+  "department": "Software"
+}
