@@ -22,7 +22,7 @@ test('open and validate new page', async ({ context, page }) => {
     expect(await newPage.textContent('h1')).toContain('This is a sample page');
 });
 
-test.only('open new message window and validate content', async ({ context, page }) => {
+test('open new message window and validate content', async ({ context, page }) => {
     const browserWindowPage = new BrowserWindowsPage(page);
     await browserWindowPage.goto();
     const [newPage] = await Promise.all([

@@ -8,6 +8,7 @@ export class FormPage {
   private mobileInput: Locator;
   private dateOfBirthInput: Locator;
   private yearDropdown: Locator;
+  private monthDropdown: Locator;
   private subjectInput: Locator;
   private hobbyOption: (hobby: string) => Locator;
   private uploadButton: Locator;
@@ -24,6 +25,7 @@ export class FormPage {
     this.mobileInput = page.getByRole('textbox', { name: 'Mobile Number' });
     this.dateOfBirthInput = page.locator('#dateOfBirthInput');
     this.yearDropdown = page.getByRole('combobox').nth(1);
+    this.monthDropdown = page.getByRole('combobox').nth(0);
     this.subjectInput = page.locator('#subjectsInput');
     this.hobbyOption = (hobby) => page.getByText(hobby, { exact: true });
     this.uploadButton = page.getByRole('button', { name: 'Select picture' });
@@ -48,6 +50,9 @@ export class FormPage {
   async selectDOB(dob: any) {
     await this.dateOfBirthInput.click();
     await this.yearDropdown.selectOption(dob.year);
+    // console.log(dob.month);
+    // await this.page.pause();
+    await this.monthDropdown.selectOption(dob.month);
     await this.page.getByRole('option', { name: new RegExp(`${dob.month} ${dob.date}`) }).click();
   }
 

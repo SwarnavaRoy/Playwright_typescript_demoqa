@@ -18,6 +18,7 @@ test('fill out the practice form', async ({ page }) => {
     await page.getByRole('textbox', { name: 'Mobile Number' }).fill('8240703540');
     await page.locator('#dateOfBirthInput').click();
     await page.getByRole('combobox').nth(1).selectOption('1990');
+    await page.getByRole('combobox').nth(0).selectOption('June');
     await page.getByRole('option', { name: 'Choose Thursday, June 28th,' }).click();
     await page.locator('.subjects-auto-complete__value-container').click();
     await page.locator('#subjectsInput').fill('maths');
